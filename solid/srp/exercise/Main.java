@@ -1,43 +1,54 @@
 package solid.srp.exercise;
 
+import javax.xml.crypto.Data;
+
 public class Main {
 
 	public static void main(String[] args) {
-        ManagementSystem managementSystem = new ManagementSystem();
+        Manager managementSystem = new Manager();
+        CustomerManager customerManager = new CustomerManager();
+        EmployeeManager employeeManager = new EmployeeManager();
+        InventoryManager inventoryManager = new InventoryManager();
+        PayrollManager payrollManager = new PayrollManager();
+        ProjectManager projectManager = new ProjectManager();
+        SalesManager salesManager = new SalesManager();
+        DatabaseManager databaseManager = new DatabaseManager();
+        FileManager fileManager = new FileManager();
+        
 
-        managementSystem.addEmployee("John Doe", 101, "Engineering");
-        managementSystem.updateEmployee(101, "Jonathan Doe");
-        managementSystem.removeEmployee(101);
+        employeeManager.addEmployee("John Doe", 101, "Engineering");
+        employeeManager.updateEmployee(101, "Jonathan Doe");
+        employeeManager.removeEmployee(101);
 
-        managementSystem.processPayroll(102, 75000.50);
-        managementSystem.generatePayrollReport();
+        payrollManager.processPayroll(102, 75000.50);
+        payrollManager.generatePayrollReport();
 
-        managementSystem.assignProject(102, "AI Development");
-        managementSystem.completeProject(102, "AI Development");
-        managementSystem.generateProjectStatusReport("AI Development");
+        projectManager.assignProject(102, "AI Development");
+        projectManager.completeProject(102, "AI Development");
+        projectManager.generateProjectStatusReport("AI Development");
 
-        managementSystem.addCustomer("Alice Smith", "alice@example.com");
-        managementSystem.updateCustomer(201, "alice.smith@example.com");
-        managementSystem.sendPromotionalEmail(201, "50% Off Sale!");
-        managementSystem.removeCustomer(201);
+        customerManager.addCustomer("Alice Smith", "alice@example.com");
+        customerManager.updateCustomer(201, "alice.smith@example.com");
+        customerManager.sendPromotionalEmail(201, "50% Off Sale!");
+        customerManager.removeCustomer(201);
 
-        managementSystem.recordSale(202, 1500.75);
-        managementSystem.generateSalesReport();
+        salesManager.recordSale(202, 1500.75);
+        salesManager.generateSalesReport();
 
-        managementSystem.addInventoryItem("Laptop", 50);
-        managementSystem.updateInventoryItemQuantity("Laptop", 45);
-        managementSystem.generateInventoryReport();
-        managementSystem.removeInventoryItem("Laptop");
+        inventoryManager.addInventoryItem("Laptop", 50);
+        inventoryManager.updateInventoryItemQuantity("Laptop", 45);
+        inventoryManager.generateInventoryReport();
+        inventoryManager.removeInventoryItem("Laptop");
 
         managementSystem.generateCompanyWideReport();
 
-        managementSystem.connectToDatabase();
-        managementSystem.saveDataToDatabase("Sample data");
-        managementSystem.loadDataFromDatabase();
-        managementSystem.disconnectFromDatabase();
+        databaseManager.connectToDatabase();
+        databaseManager.saveDataToDatabase("Sample data");
+        databaseManager.loadDataFromDatabase();
+        databaseManager.disconnectFromDatabase();
 
-        managementSystem.saveReportToFile("Annual Report", "reports/annual_report.txt");
-        managementSystem.loadReportFromFile("reports/annual_report.txt");
+        fileManager.saveReportToFile("Annual Report", "reports/annual_report.txt");
+        fileManager.loadReportFromFile("reports/annual_report.txt");
 
         managementSystem.sendEmail("admin@example.com", "System Update", "The system will undergo maintenance tonight.");
         managementSystem.logEvent("System maintenance scheduled.");
