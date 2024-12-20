@@ -11,7 +11,7 @@ public class Main {
         airplane.startEngine();
         airplane.fly();
 
-        WaterVehicle boat = new Boat();
+        Sailable boat = new Boat();
         boat.sail();
 
         Loadable truck = new Truck();

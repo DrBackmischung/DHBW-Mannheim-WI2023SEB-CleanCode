@@ -1,6 +1,6 @@
 package solid.isp.exercise;
 
-public class Boat implements WaterVehicle, Loadable {
+public class Boat implements Sailable, Loadable {
     @Override
     public void startEngine() {
         System.out.println("Boat engine started.");

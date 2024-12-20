@@ -1,5 +1,5 @@
 package solid.isp.exercise;
 
-public interface WaterVehicle extends Vehicle {
+public interface Sailable extends Vehicle {
     void sail();
 }
