@@ -1,50 +1,61 @@
 package solid.srp.exercise;
 
+import java.io.File;
+
 public class Main {
 
 	public static void main(String[] args) {
-        ManagementSystem managementSystem = new ManagementSystem();
+        EmployeeManagement employeeManagementSystem = new EmployeeManagement();
+        PayrollManagement payRollManagementSystem = new PayrollManagement();
+        ProjectManagement projectManagementSystem = new ProjectManagement();
+        CustomerManagement customerManagementSystem = new CustomerManagement();
+        SalesMangement salesManagementSystem = new SalesMangement();
+        InventoryManagement inventoryManagementSystem = new InventoryManagement();
+        ReportGeneration reportGenerationSystem = new ReportGeneration();
+        DatabaseOperations databaseOperationsSystem = new DatabaseOperations();
+        FileHandling fileHandlingSystem = new FileHandling();
+        UtilityMethods utilityMethods = new UtilityMethods();
 
-        managementSystem.addEmployee("John Doe", 101, "Engineering");
-        managementSystem.updateEmployee(101, "Jonathan Doe");
-        managementSystem.removeEmployee(101);
+        employeeManagementSystem.addEmployee("John Doe", 101, "Engineering");
+        employeeManagementSystem.updateEmployee(101, "Jonathan Doe");
+        employeeManagementSystem.removeEmployee(101);
 
-        managementSystem.processPayroll(102, 75000.50);
-        managementSystem.generatePayrollReport();
+        payRollManagementSystem.processPayroll(102, 75000.50);
+        payRollManagementSystem.generatePayrollReport();
 
-        managementSystem.assignProject(102, "AI Development");
-        managementSystem.completeProject(102, "AI Development");
-        managementSystem.generateProjectStatusReport("AI Development");
+        projectManagementSystem.assignProject(102, "AI Development");
+        projectManagementSystem.completeProject(102, "AI Development");
+        projectManagementSystem.generateProjectStatusReport("AI Development");
 
-        managementSystem.addCustomer("Alice Smith", "alice@example.com");
-        managementSystem.updateCustomer(201, "alice.smith@example.com");
-        managementSystem.sendPromotionalEmail(201, "50% Off Sale!");
-        managementSystem.removeCustomer(201);
+        customerManagementSystem.addCustomer("Alice Smith", "alice@example.com");
+        customerManagementSystem.updateCustomer(201, "alice.smith@example.com");
+        customerManagementSystem.sendPromotionalEmail(201, "50% Off Sale!");
+        customerManagementSystem.removeCustomer(201);
 
-        managementSystem.recordSale(202, 1500.75);
-        managementSystem.generateSalesReport();
+        salesManagementSystem.recordSale(202, 1500.75);
+        salesManagementSystem.generateSalesReport();
 
-        managementSystem.addInventoryItem("Laptop", 50);
-        managementSystem.updateInventoryItemQuantity("Laptop", 45);
-        managementSystem.generateInventoryReport();
-        managementSystem.removeInventoryItem("Laptop");
+        inventoryManagementSystem.addInventoryItem("Laptop", 50);
+        inventoryManagementSystem.updateInventoryItemQuantity("Laptop", 45);
+        inventoryManagementSystem.generateInventoryReport();
+        inventoryManagementSystem.removeInventoryItem("Laptop");
 
-        managementSystem.generateCompanyWideReport();
+        reportGenerationSystem.generateCompanyWideReport();
 
-        managementSystem.connectToDatabase();
-        managementSystem.saveDataToDatabase("Sample data");
-        managementSystem.loadDataFromDatabase();
-        managementSystem.disconnectFromDatabase();
+        databaseOperationsSystem.connectToDatabase();
+        databaseOperationsSystem.saveDataToDatabase("Sample data");
+        databaseOperationsSystem.loadDataFromDatabase();
+        databaseOperationsSystem.disconnectFromDatabase();
 
-        managementSystem.saveReportToFile("Annual Report", "reports/annual_report.txt");
-        managementSystem.loadReportFromFile("reports/annual_report.txt");
+        fileHandlingSystem.saveReportToFile("Annual Report", "reports/annual_report.txt");
+        fileHandlingSystem.loadReportFromFile("reports/annual_report.txt");
 
-        managementSystem.sendEmail("admin@example.com", "System Update", "The system will undergo maintenance tonight.");
-        managementSystem.logEvent("System maintenance scheduled.");
-        managementSystem.sendSystemNotification("Reminder: Maintenance scheduled at 10 PM.");
-        managementSystem.printDocument("Company Policy Document");
+        utilityMethods.sendEmail("admin@example.com", "System Update", "The system will undergo maintenance tonight.");
+        utilityMethods.logEvent("System maintenance scheduled.");
+        utilityMethods.sendSystemNotification("Reminder: Maintenance scheduled at 10 PM.");
+        utilityMethods.printDocument("Company Policy Document");
 
-        managementSystem.shutdownSystem();
+        utilityMethods.shutdownSystem();
 	}
 
 }
