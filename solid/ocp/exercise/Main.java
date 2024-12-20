@@ -8,10 +8,10 @@ public class Main {
         Parallelogram parallelogram = new Parallelogram(8, 3);
         Triangle triangle = new Triangle(8, 2);
         
-        System.out.println("Circle Area: " + Calculator.calculateArea(circle));
-        System.out.println("Rectangle Area: " + Calculator.calculateArea(rectangle));
-        System.out.println("Parallelogram Area: " + Calculator.calculateArea(parallelogram));
-        System.out.println("Triangle Area: " + Calculator.calculateArea(triangle));
+        System.out.println("Circle Area: " + circle.calculateArea());
+        System.out.println("Rectangle Area: " + rectangle.calculateArea());
+        System.out.println("Parallelogram Area: " + parallelogram.calculateArea());
+        System.out.println("Triangle Area: " + triangle.calculateArea());
 	}
 
 }

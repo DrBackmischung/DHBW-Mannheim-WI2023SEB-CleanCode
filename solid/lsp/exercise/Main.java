@@ -8,10 +8,9 @@ public class Main {
         rectangle.setHeight(5);
         System.out.println("Rectangle Area: " + rectangle.calculateArea()); // Expected: 20
 
-        Rectangle square = new Square();
-        square.setWidth(4);
-        square.setHeight(5); 
-        System.out.println("Square Area: " + square.calculateArea()); // Unexpected: 25
+        Square square = new Square();
+        square.setSide(4);
+        System.out.println("Square Area: " + square.calculateArea()); // Expected: 16
 	}
 
 }
