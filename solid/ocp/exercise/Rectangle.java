@@ -1,6 +1,6 @@
 package solid.ocp.exercise;
 
-public class Rectangle {
+public class Rectangle extends Shape {
     private double width;
     private double height;
 
@@ -15,5 +15,9 @@ public class Rectangle {
 
     public double getHeight() {
         return height;
+    }
+    @Override
+    public double calculateArea() {
+        return width * height;
     }
 }
