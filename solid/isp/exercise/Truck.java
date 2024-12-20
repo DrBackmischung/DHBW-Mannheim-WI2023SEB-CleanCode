@@ -1,6 +1,6 @@
 package solid.isp.exercise;
 
-public class Truck implements Vehicle {
+public class Truck implements Loadable {
     @Override
     public void startEngine() {
         System.out.println("Truck engine started.");
@@ -9,16 +9,6 @@ public class Truck implements Vehicle {
     @Override
     public void stopEngine() {
         System.out.println("Truck engine stopped.");
-    }
-
-    @Override
-    public void fly() {
-        throw new UnsupportedOperationException("Trucks cannot fly.");
-    }
-
-    @Override
-    public void sail() {
-        throw new UnsupportedOperationException("Trucks cannot sail.");
     }
 
     @Override
